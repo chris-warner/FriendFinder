@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/chris-warner/FriendFinder/issues"
   },
-  "homepage": "https://github.com/chris-warner/FriendFinder#readme"
+  "homepage": "https://github.com/chris-warner/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }
