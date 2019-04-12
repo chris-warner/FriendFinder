@@ -12,4 +12,13 @@ var path = require("path");
 module.exports = function(app) {
 
     
+  app.get("../data/friends.js", function(req, res) {
+    res.json(tableData);
+  });
+
+
+  app.post("./data/friends.js", function(req, res) {
+
+
+});
 }
