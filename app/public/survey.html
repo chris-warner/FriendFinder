@@ -15,7 +15,9 @@
 
 <body>
   <div class="center ">
-    <h1 class="title">Survey Questions</h1>
+    <div id="header-div"></div>
+   <center> <h1 class="title">Friend Finder</h1></center>
+   <h2>Survey Questions</h2>
     <br>
     <h2>About you</h2>
     <div class="about-div">
@@ -25,6 +27,8 @@
       </p>
       <input class="about-text" id="photo_txtbox" type="text">
     </div>
+    <br>
+    <br>
     <div id="survey" class="d-flex p-2">
       <form>
         <h3>Question 1.</h3>
@@ -225,6 +229,12 @@
 <style>
   #survey {
     margin-left: 0px;
+    border-bottom: 0px;
+    border-left: 0ch;
+    border-right: 0px;
+    border-top: 0.8px;
+    border-color: silver;
+    border-style: outset;
   }
 
   .title {
@@ -236,8 +246,18 @@
     border-top: 0px;
     border-color: silver;
     border-style: outset;
+    background-color: red;
+    color:white;
+    align-content: center;
+    height: 200px;
+    padding-top:75px;
   }
 
+#submit_btn {
+background-color: red;
+border: red;
+width:100%;
+}
   .center {
     margin: auto;
     width: 90%;
