@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Tables Page</title>
@@ -11,67 +12,211 @@
 
 
 </head>
+
 <body>
+  <div class="center ">
+    <h1 class="title">Survey Questions</h1>
+    <br>
+    <h2>About you</h2>
+    <div class="about-div">
+      <p>Name (Required)</p>
+      <input class="about-text" id="name_txtbox" type="text">
+      <p>Link to Photo Image (Required)
+      </p>
+      <input class="about-text" id="photo_txtbox" type="text">
+    </div>
+    <div id="survey" class="d-flex p-2">
+      <form>
+        <p>Question 1.</p>
+        <p>Test</p>
+        <select name="Question 1" id="question1">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
 
-  <div class="container">
+        <p>Question 2.</p>
+        <p>Test</p>
+        <select name="Question 2" id="question2">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
 
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-fire"></span>Survey Page</h1>
-      <hr>
-      <h2 class="text-center">Complete the following survey to find your match!</h2>
-      <br>
+        <p>Question 3.</p>
+        <p>Test</p>
+        <select name="Question 3" id="question3">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
 
-  
+        <p>Question 4.</p>
+        <p>Test</p>
+        <select name="Question 4" id="question4">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 5.</p>
+        <p>Test</p>
+        <select name="Question 5" id="question5">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 6.</p>
+        <p>Test</p>
+        <select name="Question 6" id="question6">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 7.</p>
+        <p>Test</p>
+        <select name="Question 7" id="question7">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 8.</p>
+        <p>Test</p>
+        <select name="Question 8" id="question8">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 9.</p>
+        <p>Test</p>
+        <select name="Question 9" id="question9">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+        <p>Question 10.</p>
+        <p>Test</p>
+        <select name="Question 10" id="question10">
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+
+
+      </form>
     </div>
 
+    <div class="text-center">
+      <a href="/survey"><button class="btn btn-lg btn-primary" id="submit_btn"><span class="fa fa-list-alt"></span>
+          Submit</button></a>
+    </div>
   </div>
-
-  <div id="survey">
-    <form>
-      <p>Question 1.</p>
-      <p>Blablablablablablabla</p>
-      <select name="Question 1">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      <br><br>
-    </form>
-  </div>
-
-  <div class="text-center">
-    <a href="/survey"><button class="btn btn-lg btn-primary" id="submit_btn"><span class="fa fa-list-alt"></span> Submit</button></a>
-  </div>
-
 </body>
+
 <script>
-
-
-$("#submit_btn").click(function(){
-  event.preventDefault();
-
-  var newPerson = {
-  
-     // name: $("#reserve-name").val().trim(),
-     // photo: $("#reserve-phone").val().trim(),
-     // scores: $("#reserve-email").val().trim(),
+  $("#submit_btn").click(function () {
+    event.preventDefault();
+    var newPerson = {
+      name: $("#name_txtbox").val().trim(),
+      photo: $("#photo_txtbox").val().trim(),
+      scores: [
+        parseInt($("#question1").val().trim()),
+        parseInt($("#question2").val().trim()),
+        parseInt($("#question3").val().trim()),
+        parseInt($("#question4").val().trim()),
+        parseInt($("#question5").val().trim()),
+        parseInt($("#question6").val().trim()),
+        parseInt($("#question7").val().trim()),
+        parseInt($("#question8").val().trim()),
+        parseInt($("#question9").val().trim()),
+        parseInt($("#question10").val().trim()),
+      ]
     };
     console.log(newPerson);
     $.post("/api/friends", newPerson,
-      function(data) {
-console.log(data);
+      function (data) {
+        console.log(data);
+        data.push(newPerson);
+        console.log(data);
       });
-submitSurvey();
-});
-function submitSurvey() {
-  alert("Submitting...");
+    submitSurvey();
+  });
 
-$.ajax({ url: "/api/friends", method: "POST" }).then(function() {
+  function submitSurvey() {
+    alert("Submitting...");
 
-});
+    $.ajax({
+      url: "/api/friends",
+      method: "POST"
+    }).then(function () {
 
-}
+    });
 
+  }
 </script>
+<style>
+  #survey {
+    margin-left: 0px;
+  }
+
+  .title {
+    margin-top: 8px;
+    margin-left: 8px;
+    border-bottom: 0.8px;
+    border-left: 0ch;
+    border-right: 0px;
+    border-top: 0px;
+    border-color: silver;
+    border-style: outset;
+  }
+
+  .center {
+    margin: auto;
+    width: 90%;
+
+    padding: 10px;
+    min-width: 420px;
+    ;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+</style>
+
 </html>
