@@ -7,6 +7,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+
 
 </head>
 <body>
@@ -14,7 +16,7 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-fire"></span> Friend Finder</h1>
+      <h1 class="text-center"><span class="fa fa-fire"></span>Survey Page</h1>
       <hr>
       <h2 class="text-center">Complete the following survey to find your match!</h2>
       <br>
@@ -22,17 +24,54 @@
   
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a>
-      </div>
-    </footer>
+  </div>
 
+  <div id="survey">
+    <form>
+      <p>Question 1.</p>
+      <p>Blablablablablablabla</p>
+      <select name="Question 1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br><br>
+    </form>
   </div>
 
   <div class="text-center">
-    <a href="/survey"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Submit</button></a>
+    <a href="/survey"><button class="btn btn-lg btn-primary" id="submit_btn"><span class="fa fa-list-alt"></span> Submit</button></a>
   </div>
 
 </body>
+<script>
+
+
+$("#submit_btn").click(function(){
+  event.preventDefault();
+
+  var newPerson = {
+  
+     // name: $("#reserve-name").val().trim(),
+     // photo: $("#reserve-phone").val().trim(),
+     // scores: $("#reserve-email").val().trim(),
+    };
+    console.log(newPerson);
+    $.post("/api/friends", newPerson,
+      function(data) {
+console.log(data);
+      });
+submitSurvey();
+});
+function submitSurvey() {
+  alert("Submitting...");
+
+$.ajax({ url: "/api/friends", method: "POST" }).then(function() {
+
+});
+
+}
+
+</script>
 </html>
