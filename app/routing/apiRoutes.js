@@ -47,6 +47,13 @@ module.exports = function(app) {
       console.log(matchArray);
      });
 
+     let i = matchArray.indexOf(Math.max(...matchArray));
+     console.log("Position of best match in best match array...");
+     console.log(i);
+     console.log("RESULTS");
+     console.log("YOUR BEST MATCH IS");
+     console.log(friendsDataArray[i].name);
+
      friendsDataArray.push(newPerson);//add person to friends array.
 
 });
