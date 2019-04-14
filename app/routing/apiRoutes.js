@@ -19,8 +19,8 @@ module.exports = function(app) {
     console.log("friends data" + friendsData)
   });
 
-
   app.post("/api/friends", function(req, res) {
+    let matchArray = [];
     //containts the friends array==================
     console.log("NEWSUBMISSION==================")
      newPerson = req.body; // data from survey
@@ -29,20 +29,24 @@ module.exports = function(app) {
      console.log("People in database: ");
      console.log( friendsDataArray);
      console.log("Calculating difference between each score between survey submission and people in database"); 
-     var matchArray = []; // The scores is in this index will be in allignment with the persons in friendsDataArray.
+  // The scores is in this index will be in allignment with the persons in friendsDataArray.
      friendsDataArray.forEach(function (person){
+
+       let talley = 0;
        console.log(person.name);
        console.log(newPerson.name); 
       for(var i = 0; i < 10; i ++){ 
         let scoreResult = Math.abs(person.scores[i] - newPerson.scores[i]);
-   //    let scoreResultNegated = Math.abs(score);
         console.log(scoreResult);
+        talley = talley + scoreResult;
       }
-
-      person.scores.forEach(function(score){
-        
-      });
+      console.log("total score: ");
+      console.log(talley);
+      matchArray.push(talley);
+      console.log("Results Talley Array Databse");
+      console.log(matchArray);
      });
+
      friendsDataArray.push(newPerson);//add person to friends array.
 
 });
