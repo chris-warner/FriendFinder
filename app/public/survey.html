@@ -16,7 +16,7 @@
 <body>
   <div class="center ">
     <div id="header-div"></div>
-   <center> <h1 class="title">Friend Finder</h1></center>
+   <center> <h1 class="title">Friend Finder</h1> </center>
    <h2>Survey Questions</h2>
     <br>
     <h2>About you</h2>
@@ -185,9 +185,12 @@
 </body>
 
 <script>
+  
+  var newPerson;
   $("#submit_btn").click(function () {
     event.preventDefault();
-    var newPerson = {
+
+    newPerson = {
       name: $("#name_txtbox").val().trim(),
       photo: $("#photo_txtbox").val().trim(),
       scores: [
@@ -203,27 +206,17 @@
         parseInt($("#question10").val().trim())
       ]
     };
-    console.log(newPerson);
+
+
     $.post("/api/friends", newPerson, function (data) {
-      console.log(data);
-      data.push(newPerson);
-      console.log(data);
+
+      $("#resultsModal").modal("show");
+    
     });
-    submitSurvey();
-    $("#resultsModal").modal("show");
+
   });
 
-  function submitSurvey() {
-    alert("Submitting...");
-
-    $.ajax({
-      url: "/api/friends",
-      method: "POST"
-    }).then(function () {
-
-    });
-
-  }
+  
 </script>
 <style>
   #survey {
