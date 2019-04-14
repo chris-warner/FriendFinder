@@ -1,6 +1,6 @@
 var friends = [{
         //Test
-        name: "Anne",
+        name: "Anne (Demo Content)",
         photo: "https://images.unsplash.com/photo-1524253860834-0e02422248bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
         scores: [
             1,
@@ -16,7 +16,7 @@ var friends = [{
         ]
     },
     {
-        name: "Julie",
+        name: "Julie (Demo Content)",
         photo: "https://images.unsplash.com/photo-1498652774327-af8352e87862?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
         scores: [
             4,
