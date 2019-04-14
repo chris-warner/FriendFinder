@@ -34,7 +34,7 @@ module.exports = function(app) {
        console.log(person.name);
        console.log(newPerson.name); 
       for(var i = 0; i < 10; i ++){ 
-        let scoreResult = Math.abs(person.scores[i] - newPerson.scores[i];
+        let scoreResult = Math.abs(person.scores[i] - newPerson.scores[i]);
    //    let scoreResultNegated = Math.abs(score);
         console.log(scoreResult);
       }
