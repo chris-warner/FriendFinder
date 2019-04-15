@@ -13,7 +13,7 @@ module.exports = function (app) {
     let matchArray = [];
     newPerson = req.body;
     friendsDataArray.forEach(function (person) {
-      let talley = 0;
+        let talley = 0;
       for (var i = 0; i < 10; i++) {
         let scoreResult = Math.abs(person.scores[i] - newPerson.scores[i]);
         talley = talley + scoreResult;
