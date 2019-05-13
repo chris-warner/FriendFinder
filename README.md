@@ -1,5 +1,6 @@
 # FriendFinder
-Dating App.
+
+## Technologies used in this project: html, css, node.js, express, sequelize, heroku.
 
 Check out the live demo on https://afternoon-temple-47575.herokuapp.com/.
 
